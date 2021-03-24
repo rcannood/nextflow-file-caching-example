@@ -2,6 +2,8 @@
 nextflow.enable.dsl=2
 
 process foo {
+    tag "${name}"
+    echo true
     cpus 1
     memory 500.MB
     container "opensuse/leap:latest"
@@ -12,6 +14,7 @@ process foo {
     output:
         path("${name}.txt")
     """
+    sha1sum ${template_file}
     cat ${template_file} > ${name}.txt
     echo ${name} >> ${name}.txt
     """
