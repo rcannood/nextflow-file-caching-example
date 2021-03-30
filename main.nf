@@ -7,7 +7,7 @@ process foo {
     cpus 1
     memory 500.MB
     container "opensuse/leap:latest"
-    cache 'deep'
+    cache 'lenient'
     input:
         val(name)
         path(template_file)
