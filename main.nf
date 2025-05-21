@@ -10,7 +10,7 @@ process foo {
     cache 'lenient'
     input:
         val(name)
-        path(template_file)
+        path(template_file, stageAs: "template2.txt")
     output:
         path("${name}.txt")
     """
