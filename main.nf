@@ -22,6 +22,6 @@ process foo {
 
 workflow {
     names = Channel.from(['Riri', 'Fifi', 'Loulou'])
-    template_file = file("${baseDir}/assets/template.txt")
+    template_file = file("${projectDir}/assets/template.txt")
     foo(names, template_file)
 }
