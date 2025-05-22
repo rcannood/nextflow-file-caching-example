@@ -27,7 +27,7 @@ nextflow run DriesSchaumont/nextflow-file-caching-example -r 894de23c7aa15e74e85
 ## Cleaning the repository (again)
 
 ```
-nextflow drop DriesSchaumont/nextflow-file-caching-example; rm -rf .nextflow && rm -rf .nextflow.log* && rm -rf work
+nextflow drop rcannood/nextflow-file-caching-example; rm -rf .nextflow && rm -rf .nextflow.log* && rm -rf work
 ```
 
 ## Example of directory not being caches
@@ -36,8 +36,9 @@ By using `--asset_size large`, the directory `assets` is used as the input in th
 It contains 5 extra files containing random data, to increase the size of the directory for demonstration purposes.
 
 ```
-nextflow run DriesSchaumont/nextflow-file-caching-example -r 894de23c7aa15e74e858071647d665d2ed508692 --asset_size large &&
-nextflow drop DriesSchaumont/nextflow-file-caching-example &&
-nextflow run DriesSchaumont/nextflow-file-caching-example -r 894de23c7aa15e74e858071647d665d2ed508692 --asset_size large -resume
+nextflow drop rcannood/nextflow-file-caching-example; rm -rf .nextflow && rm -rf .nextflow.log* && rm -rf work && rm -rf lineage
+nextflow run rcannood/nextflow-file-caching-example -r 16928228e600a6f7c05c18967ce7b278c12312f5 --asset_size large &&
+nextflow drop rcannood/nextflow-file-caching-example &&
+nextflow run rcannood/nextflow-file-caching-example -r 16928228e600a6f7c05c18967ce7b278c12312f5 --asset_size large -resume
 ```
 
