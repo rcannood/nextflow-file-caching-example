@@ -16,9 +16,9 @@ nextflow drop DriesSchaumont/nextflow-file-caching-example; rm -rf .nextflow && 
 By using `--asset_size small`, the directory `assets_small` is used as the input in the process.
 
 ```
-nextflow run DriesSchaumont/nextflow-file-caching-example -r 894de23c7aa15e74e858071647d665d2ed508692 --asset_size small &&
+nextflow run DriesSchaumont/nextflow-file-caching-example -r c672cdc811daf4ddddc541fb57c7eb44b0c54e62 --asset_size small &&
 nextflow drop DriesSchaumont/nextflow-file-caching-example &&
-nextflow run DriesSchaumont/nextflow-file-caching-example -r 894de23c7aa15e74e858071647d665d2ed508692 --asset_size small -resume
+nextflow run DriesSchaumont/nextflow-file-caching-example -r c672cdc811daf4ddddc541fb57c7eb44b0c54e62 --asset_size small -resume
 ```
 
 
@@ -36,8 +36,8 @@ By using `--asset_size large`, the directory `assets` is used as the input in th
 It contains 5 extra files containing random data, to increase the size of the directory for demonstration purposes.
 
 ```
-nextflow run DriesSchaumont/nextflow-file-caching-example -r 894de23c7aa15e74e858071647d665d2ed508692 --asset_size large &&
+nextflow run DriesSchaumont/nextflow-file-caching-example -r c672cdc811daf4ddddc541fb57c7eb44b0c54e62 --asset_size large &&
 nextflow drop DriesSchaumont/nextflow-file-caching-example &&
-nextflow run DriesSchaumont/nextflow-file-caching-example -r 894de23c7aa15e74e858071647d665d2ed508692 --asset_size large -resume
+nextflow run DriesSchaumont/nextflow-file-caching-example -r c672cdc811daf4ddddc541fb57c7eb44b0c54e62 --asset_size large -resume
 ```
 
