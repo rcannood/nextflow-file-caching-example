@@ -3,7 +3,7 @@ nextflow.enable.dsl=2
 
 process foo {
     tag "${name}"
-    echo true
+    debug true
     cpus 1
     memory 500.MB
     container "opensuse/leap:latest"
