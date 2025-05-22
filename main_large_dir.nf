@@ -21,6 +21,6 @@ process foo {
 
 workflow {
     names = Channel.from(['Riri', 'Fifi', 'Loulou'])
-    asset_dir = file("${projectDir}/assets_small")
+    asset_dir = file("${projectDir}/assets")
     foo(names, asset_dir)
 }
