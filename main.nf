@@ -10,18 +10,18 @@ process foo {
     cache 'lenient'
     input:
         val(name)
-        path(template_file, stageAs: "template2.txt")
+        path(asset_dir, stageAs: "template2.txt")
     output:
         path("${name}.txt")
     """
-    sha1sum ${template_file}
-    cat ${template_file} > ${name}.txt
+    sha1sum ${asset_dir}/template.txt
+    cat ${asset_dir}/template.txt > ${name}.txt
     echo ${name} >> ${name}.txt
     """
 }
 
 workflow {
     names = Channel.from(['Riri', 'Fifi', 'Loulou'])
-    template_file = file("${projectDir}/assets/template.txt")
-    foo(names, template_file)
+    asset_dir = file("${projectDir}/assets")
+    foo(names, asset_dir)
 }
