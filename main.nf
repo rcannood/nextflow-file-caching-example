@@ -9,7 +9,7 @@ process foo {
     container "opensuse/leap:latest"
     input:
         val(name)
-        path(asset_dir, stageAs: "template2.txt")
+        path(asset_dir, stageAs: "test_assets")
     output:
         path("${name}.txt")
     """
